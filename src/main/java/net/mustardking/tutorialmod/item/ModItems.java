@@ -26,7 +26,7 @@ public class ModItems {
     public static void registerModItems() {
         TutorialMod.LOGGER.info("Registering mod items for " + TutorialMod.MOD_ID);
 
-        // Adding the items to the 'Ingrediants' item group on the creative menu
+        // Adding the items to the 'Ingredients' item group on the creative menu
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PINK_GARNET);
             entries.add(RAW_PINK_GARNET);
