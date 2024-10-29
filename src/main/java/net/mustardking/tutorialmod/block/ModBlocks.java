@@ -3,6 +3,7 @@ package net.mustardking.tutorialmod.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -10,6 +11,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.mustardking.tutorialmod.TutorialMod;
 
 public class ModBlocks {
@@ -18,11 +20,22 @@ public class ModBlocks {
 
     // Pink Garnet Block
     public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
-            new Block(AbstractBlock.Settings.create().strength(10f, 6f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            new Block(AbstractBlock.Settings.create().strength(5f, 6f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     // Raw Pink Garnet Block
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block",
             new Block(AbstractBlock.Settings.create().strength(5f, 3f).requiresTool().sounds(BlockSoundGroup.STONE)));
+
+    // Garnet Ore
+    public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create().strength(5f, 3f).requiresTool().sounds(BlockSoundGroup.STONE)));
+
+    // Garnet Deepslate Ore
+    public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(5, 8),
+                    AbstractBlock.Settings.create().strength(10f, 3f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
 
     // Register helper function for blocks when they're in 3d block form (placed on the ground)
     private static Block registerBlock(String name, Block block) {
