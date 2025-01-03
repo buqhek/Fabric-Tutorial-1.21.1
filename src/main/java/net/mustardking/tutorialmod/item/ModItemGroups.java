@@ -21,6 +21,7 @@ public class ModItemGroups {
                         // Add Pink Garnet Items here below:
                         entries.add(ModItems.PINK_GARNET);
                         entries.add(ModItems.RAW_PINK_GARNET);
+                        entries.add(ModItems.CHISEL);
                     })
                     .build());
 
@@ -35,6 +36,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.PINK_GARNET_ORE);
                         entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+
                     })
                     .build());
 
